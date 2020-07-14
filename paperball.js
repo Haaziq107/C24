@@ -2,7 +2,7 @@ class Paperball {
     constructor(x, y, radius) {
       var options = {
       //isStatic:false,
-      restitution:0.04,
+      restitution:0.5,
       friction:0.3,   
       density:1
       }
@@ -14,11 +14,11 @@ class Paperball {
     display(){
       var pos =this.body.position;
       push();
-      translate(pos.x,pos.y);
+      //translate(pos.x,pos.y);
       //rotate(this.body.angle);
       ellipseMode(CENTER);
       fill("red");
-      ellipse(pos.x,pos.y,this.radius/2,this.radius/2);
+      ellipse(pos.x,pos.y,this.radius*2,this.radius*2);
       pop();
     }
   };
